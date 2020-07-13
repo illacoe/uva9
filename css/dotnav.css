@@ -1,0 +1,81 @@
+#indicator {
+  top: calc(50% - 125px);
+  position: fixed;
+  left: 15px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+#indicator li {
+  list-style: none;
+  background-color: #ffffff;
+  opacity: 0.25;
+  width: 2px;
+  height: 23px;
+  display: inline-grid;
+  margin: 3px 10px;
+  align-items: center;
+}
+#indicator.dark-nav li {
+  list-style: none;
+  background-color: #000000;
+  opacity: 0.25;
+  width: 2px;
+  height: 23px;
+  display: inline-grid;
+  margin: 3px 10px;
+  align-items: center;
+}
+
+#indicator li:hover {
+  background-color: white;
+  opacity: 1;
+  cursor: pointer;
+}
+#indicator.dark-nav li:hover {
+  background-color: black;
+  opacity: 1;
+  cursor: pointer;
+}
+#indicator li span {
+  padding-left: 14px;
+  color: white;
+  opacity: 0;
+  width: max-content;
+  font-size: 14px;
+}
+#indicator.dark-nav li span {
+  padding-left: 14px;
+  color: black;
+  opacity: 0;
+  width: max-content;
+  font-size: 14px;
+}
+#indicator li.active {
+  background-color: #ffffff;
+  opacity: 1;
+  width: 3px;
+}
+#indicator li.active span:hover {
+  opacity: 1;
+}
+#indicator li.active span {
+  animation: fade 5s ease-out;
+}
+#indicator li:hover span {
+  animation: fade 5s ease-out;
+}
+@keyframes fade {
+  1% {
+    opacity: 1;
+    display: block;
+  }
+  95% {
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
