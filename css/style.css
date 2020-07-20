@@ -1,7 +1,11 @@
+@import "loader.css";
 @import "dotnav.css";
 @import "carousel.css";
+@import "content-slider.css";
 @import "top-nav.css";
+
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Work+Sans&display=swap");
+
 body {
   margin: 0;
   padding: 0;
@@ -22,4 +26,17 @@ body {
 
 .ov-hidden{
   overflow: hidden;
+}
+
+.footer{ 
+  position: absolute;
+  bottom: 0; 
+  right: 0;
+  left: 0;
+  padding: 5px 20px;
+  background: black;
+}
+.footer p {
+
+  color: white;
 }

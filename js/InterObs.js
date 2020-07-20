@@ -1,34 +1,43 @@
 
-var carousel = document.querySelector('.carousel');
-var indicator = document.querySelector('#indicator');
-var elements = document.querySelectorAll('.carousel > *');
-let logoType = document.querySelector('.logo');
-let navTop = document.querySelector('.navbar');
-var currentIndex = 0;
-var styleElem = document.head.appendChild(document.createElement("style"));
+const carousel = document.querySelector('.carousel');
+const indicator = document.querySelector('#indicator');
+let elements = document.querySelectorAll('.carousel > *');
+const logoType = document.querySelector('.logo');
+const navTop = document.querySelector('.navbar');
+let currentIndex = 0;
+let styleElem = document.head.appendChild(document.createElement("style"));
 
+// let burger =  document.querySelector('.icon-menu');
+// let navbarMobil = document.querySelector('.navbar-mobil');
 
  
 
 function renderIndicator() {
     // this is just an example indicator; you can probably do better
     indicator.innerHTML = '';
-    for (var i = 0; i < elements.length; i++) {
+    for (let i = 0; i < elements.length; i++) {
          
-        var button = document.createElement('li');
-        button.innerHTML = '<span>'+elements[i].getAttribute( 'name' )+'</<span>'
-            
+        let button = document.createElement('li');
+        button.innerHTML = '<span>'+elements[i].getAttribute('name')+'</<span>'
+        
         // button.innerHTML = (i === currentIndex ? '<a class="active"></a><span>'+elements[i].getAttribute( 'id' )+'</<span>' : '<a></a>');
         if(i === currentIndex){
-            button.classList.add('active')
-            if(elements[i].getAttribute('class') === 'dark'){
+            button.classList.add('active');
+            
+            let color = elements[i].getAttribute('class');
+ 
+
+            if(color === 'dark'){ 
+                carousel.setAttribute("id", "dark");
+                
                 console.log('este es oscuro')
                 logoType.innerHTML = '<img src="img/logo.png" alt="">'
                 button.style.backgroundColor = 'white'
                 styleElem.innerHTML = " .lines:before, .lines:after {background: white;}";
                 indicator.classList.remove('dark-nav') 
                 navTop.classList.remove('light-navtop')
-            }else{
+            }else{ 
+                carousel.setAttribute("id", "light");
                 console.log('este es claro')
                 logoType.innerHTML = '<img src="img/logo2.png" alt="">'
                 button.style.backgroundColor = 'black' 
@@ -36,8 +45,9 @@ function renderIndicator() {
                 indicator.classList.add('dark-nav')
                 navTop.classList.add('light-navtop')
                 button.firstChild.style.color = 'black'
- 
             }
+
+
                 // {button.style.backgroundColor = 'black' }
             // button.innerHTML = '<span>'+elements[i].getAttribute( 'id' )+'</<span>'
         }
@@ -51,7 +61,7 @@ function renderIndicator() {
     }
 }
 
-var observer = new IntersectionObserver(function(entries, observer) {
+let observer = new IntersectionObserver(function(entries, observer) {
 // find the entry with the largest intersection ratio
 entries.map((entry) => {
 if (entry.isIntersecting) {
@@ -61,7 +71,7 @@ console.log(entry)
 }
 });
 
-var activated = entries.reduce(function (max, entry) {
+let activated = entries.reduce(function (max, entry) {
     return (entry.intersectionRatio > max.intersectionRatio) ? entry : max;
 });
 if (activated.intersectionRatio > 0) {
@@ -71,8 +81,8 @@ if (activated.intersectionRatio > 0) {
 }, {
 root:carousel, threshold:0.5
 });
-var elementIndices = {};
-for (var i = 0; i < elements.length; i++) {
+let elementIndices = {};
+for (let i = 0; i < elements.length; i++) {
 elementIndices[elements[i].getAttribute("id")] = i;
 observer.observe(elements[i]);
 }
