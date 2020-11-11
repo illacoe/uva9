@@ -3,6 +3,9 @@
 @import "carousel.css";
 @import "content-slider.css";
 @import "top-nav.css";
+@import "responsive.css";
+@import "logo.css";
+@import "icon.css";
 
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Work+Sans&display=swap");
 
@@ -27,7 +30,9 @@ body {
 .ov-hidden{
   overflow: hidden;
 }
-
+a{
+  text-decoration: none;
+}
 .footer{ 
   position: absolute;
   bottom: 0; 
@@ -35,8 +40,17 @@ body {
   left: 0;
   padding: 5px 20px;
   background: black;
+  padding: 20px 0;
 }
 .footer p {
-
+  padding: 0 10%;
   color: white;
+  margin: 0;
+}
+.container{
+  width: 1250px;
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }

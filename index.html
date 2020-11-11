@@ -4,94 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/resposive.css">
+    <link rel="stylesheet" href="css/main.css">
     <script defer src="js/loader.js"></script>
     <script defer src="js/menu-mobil.js"></script>
-    <script defer src="js/InterObs.js"></script>
+    <!-- <script defer src="js/InterObs.js"></script> -->
 </head>
 <body>
     <div id="loader-wrapper">
-        <img class="loader" src="./img/logo.png" alt="" srcset="">
-        <div id="loader"></div>
+        <img class="loader" src="./img/logo.svg" alt="" srcset="">
+        <!-- <div id="loader"></div> -->
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
     </div>
-    <div class="navbar-mobil menu-close">
+    <!-- <div class="navbar-mobil menu-close">
         <ul>
             <li><a href="https://illacoe.com/tienda">Tienda Online Prueba</a></li>
-            <li><a href="#">Portafolio</a></li>
-            <li><a href="#">Blog</a></li>
             <li><a href="#">Contacto</a></li>
         </ul>
-    </div>
+    </div> -->
     <nav class="navbar">
-        <div class="logo"></div>
-        <div class="icon-menu">
-            <span class="lines"></span>
+        <div class="container">
+            <div class="navbar-content">
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="" srcset="">
+                </div>
+                <!-- <div class="icon-menu">
+                    <div class="lines"></div>
+                </div> -->
+                
+                <!-- <ul class="menu-desktop">
+                    <li><a href="../illacoe-blog/index.html">Portafolio</a></li>
+                    <li><a href="#">Acerca</a></li>
+                </ul> -->
+            </div>
         </div>
-        <ul>
-            <li><a href="#home">Contacto</a></li>
-            <li><a href="#about">Portafolio</a></li>
-        </ul>
     </nav>
-    <div class="carousel">
-        <div class="dark" name="Developer">
-            <img class="img-object" src="./img/slider.png" srcset="">
-            <div class="slider__content">
-                <div class="slider__content-header">
-                    <h1 class="title-one">Web Developer</h1>
-                </div>
-                <div class="slider__content-footer">
-                    <div class="panel-data">
-                        <div class="tab">
-                            <span class="header-tab">SPA</span>
-                            <span class="section-tab">Desarrollos con ReactJS y JSVanilla</span>
-                        </div>
-                        <div class="tab">
-                            <span class="header-tab">SSR</span>
-                            <span class="section-tab">Especializado usando Svelt</span>
-                        </div>
-                        <div class="tab">
-                            <span class="header-tab">UI</span>
-                            <span class="section-tab">Maquetador con Html, Css y JS</span>
-                        </div>
+     
+
+
+        <div class="carousel">
+            <div id="a"  name="Developer">
+                <img class="img-object" src="https://images.pexels.com/photos/2569997/pexels-photo-2569997.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" srcset="">
+                <div class="slider__content">
+                    <div class="slider__content-header">
+                        <h1 class="title-one">Desarrollo Web</h1>
+                        <p class="text">Desarrollamos landing pages, websites y muy pronto plataformas de ecommerce en Wordpress</p>
                     </div>
-                    <button class="btn-slide dm">Ir al blog</button>
-                    <p class="text">Soy desarrollador Front-end Javascript</p>
+                    <div class="slider__content-footer">
+                        <div class="panel-data">
+                            <div class="tab">
+                                <span class="header-tab">Wordpress</span>
+                                <span class="section-tab">Desarrollo de websites</span>
+                            </div>
+                            <div class="tab">
+                                <span class="header-tab">Tráfico</span>
+                                <span class="section-tab">Diseñamos contenido</span>
+                            </div>
+                            <div class="tab">
+                                <span class="header-tab">Páginas estáticas</span>
+                                <span class="section-tab">Html, Css y JS</span>
+                            </div>
+                        </div>
+                        <button class="btn-slide dm">Hablemos</button>
+                        <!-- <p class="text">Revisa nuestros planes</p> -->
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="dark" name="Tienda Online">
-            <div class="slider__content">
-                <div class="slider__content-header">
-                    <h2 class="title-two">Tienda Online</h2>
-                    <p class="text">Te ayudo a crear tu primera tienda online de forma rápida y sencilla.</p>
+            <!-- <div id="b"  name="Tienda Online">
+                <div class="slider__content">
+                    <div class="slider__content-header">
+                        <h2 class="title-two">Tienda Online</h2>
+                        <p class="text">Te ayudo a crear tu primera tienda online de forma rápida y sencilla.</p>
+                    </div>
+                    <div class="slider__content-section">
+                        <img class="img-slide-first" src="img/content/tienda.png" alt="">
+                    </div>
+                    <div class="slider__content-footer">
+                        <a href="" class="btn-slide dm">Probar Servicio</a>
+                    </div>
                 </div>
-                <div class="slider__content-section">
-                    <img class="img-slide-first" src="img/content/tienda.png" alt="">
+            </div> -->
+            <div id="c" name="Abstra Studio">
+                <div class="slider__content">
+                    <div class="slider__content-header">
+                        <h2 class="title-two">Diseño</h2>
+                        <p class="text">Cada proyecto es realizado a medida de nuestros clientes. Adaptamos el diseño que más te guste </p>
+                        <a href="" class="btn-slide dm">Probar Servicio</a>
+                    </div>
+                    <div class="slider__content-section"> 
+                        <img class="img-slide-first" src="https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" srcset="">
+                    </div>  
+                    <div class="slider__content-footer">
+                    </div>   
                 </div>
-                <div class="slider__content-footer">
-                    <button class="btn-slide dm">Probar Servicio</button>
-                </div>
+                <footer class="footer">
+                    <p>Hecho en Chile</p>
+                    <p>
+                        © UVA9. All rights reserved.
+                    </p>
+                </footer>
             </div>
         </div>
-        <div class="light" name="Abstra Studio">
-            <div class="slider__content">
-                <div class="slider__content-header">
-                    <h2 class="title-two lm-txt">Abstra Studio</h2>
-                    <p class="text lm-txt">Abstrastudio es un proyecto personal que he estado construyendo desde 2018, buscamos crear las mejores series de alta calidad.</p>
-                    <button class="btn-slide lm">Ver más</button>
-                </div>
-                <div class="slider__content-section"> 
-                    <img class="img-slide-first" src="img/abs.png" srcset="">
-                </div>    
-            </div>
-            <footer class="footer">
-                <p>© Illacoe 2020</p>
-            </footer>
-        </div>
-    </div>
+   
     <div id="indicator"></div>
     
     

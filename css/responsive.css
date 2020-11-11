@@ -1,0 +1,45 @@
+@media (max-width: 768px){
+    .navbar ul{
+        display: none;
+    }
+    .navbar{
+        z-index: 100;
+    }
+    #indicator{
+        display: none;
+    }
+    .navbar{
+        justify-content: space-between;
+    }
+    
+    .navbar-mobil{
+        z-index: 50;
+        background-color: black;
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+    .navbar-mobil ul{
+        padding: 40px 10%;
+    }
+    .navbar-mobil ul li {
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.288) ;
+    }
+    .navbar-mobil ul li a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .menu-open{
+        display: block;
+    }
+    .menu-close{
+        display: none;
+    }
+    
+    
+}

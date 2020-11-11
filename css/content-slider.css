@@ -81,6 +81,7 @@
     text-transform: uppercase;
     outline: none;
     margin: 10px 0;
+    text-align: center;
 }
 .lm{
     border: 3px solid black;

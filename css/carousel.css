@@ -2,7 +2,8 @@
   width: 100vw;
   height: 100vh;
   /* white-space: nowrap; */
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
@@ -15,13 +16,13 @@
   height: 100%;
   position: relative;
 }
-.dark { 
+/* .dark { 
   /* background-color: #1b1b1b; */
-  background-color: red;
+  background-color: #44eb7c;
 }
 .light {
   background-color: #fff;
-}
+} */
 /* #x {
     background-color: rgb(194, 161, 231);
     background-color: #F5004F;
@@ -32,7 +33,14 @@
 }
 #z {
     background-color: black;
-}
-#a {
-    background-color: #fff;
 } */
+#a {
+  background-color: #ffffff;
+}
+#b{
+  
+  background-color: #44eb7c;
+}
+#c{
+  background-color: #000000;
+}
